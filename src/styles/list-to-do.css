@@ -1,0 +1,16 @@
+
+.list-to-do {
+   justify-content: center;
+}
+.list-content {
+   justify-content: center;
+   text-align: left;
+}
+.todo-item {
+   display: flex;
+   justify-content: space-between;
+}
+.devide {
+   margin-top: 10px;
+   border-top: 2px dotted #eee;
+}
