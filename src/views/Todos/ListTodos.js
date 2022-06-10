@@ -92,7 +92,7 @@ class ListTodos extends React.Component {
                                           {editTodos.id === item.id ?
                                              <>
                                                 {index + 1}.
-                                                <span className="w-50 mt-3">
+                                                <span className="w-50 mt-2">
                                                    <input
                                                       type="text"
                                                       className="form-control rounded-0"

@@ -32,8 +32,6 @@ class AddTodos extends React.Component {
       toast.success('🚀 Add new todo completed!');
    }
 
-   
-
    render() {
       let {title} = this.state;
       return (
