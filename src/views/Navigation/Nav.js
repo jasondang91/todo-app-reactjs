@@ -12,7 +12,10 @@ class Nav extends React.Component {
                   HOME
                </NavLink>
                <NavLink to="/todo" activeClassName="active">
-                  TO-DO LISTING
+                  TO-DO
+               </NavLink>
+               <NavLink to="/users" activeClassName="active">
+                  USERS
                </NavLink>
             </div>
          </>

@@ -14,7 +14,8 @@ import {
 import ListTodos from './views/Todos/ListTodos';
 import Nav from "./views/Navigation/Nav";
 import Home from './views/Home/Home';
-
+import ListUsers from './views/Users/ListUsers';
+import DetailUser from './views/Users/DetailUser';
 
 function App() {
   return (
@@ -27,8 +28,14 @@ function App() {
               <Route path="/" exact>
                 <Home />
               </Route>
-              <Route path="/todo" exact>
+              <Route path="/todo">
                 <ListTodos />
+              </Route>
+              <Route path="/users" exact>
+                <ListUsers />
+              </Route>
+              <Route path="/users/:id">
+                <DetailUser />
               </Route>
             </Switch>
           </div>
