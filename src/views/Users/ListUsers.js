@@ -27,18 +27,18 @@ class ListUsers extends React.Component {
                     {listUsers && listUsers.length > 0 &&
                         listUsers.map((item, index) => {
                             return (
-                                <div className='row justify-content-center align-items-center border m-3 p-3'
-                                     key={item.id}>
+                                <div className='row bg-light bg-gradient text-dark justify-content-center align-items-center shadow border rounded-pill m-3 p-3'
+                                    key={item.id}>
                                     <div className='col-3'>
-                                        <img src={item.avatar} alt=''/>
+                                        <img src={item.avatar} className="img-thumbnail rounded" alt='' />
                                     </div>
-                                    <div className='col-6'>
-                                        {index + 1} - {item.first_name} {item.last_name}<br/>
+                                    <div className='col-5 text-start'>
+                                        {index + 1} - {item.first_name} {item.last_name}<br />
                                         {item.email}
                                     </div>
-                                    <div className='col-3'>
-                                       <button className='btn btn-light' 
-                                               onClick={() => this.handleViewDetailUser(item)}>Detail</button>
+                                    <div className='col-2'>
+                                        <button className='btn btn-dark bg-dark bg-gradient'
+                                            onClick={() => this.handleViewDetailUser(item)}>Detail</button>
                                     </div>
                                 </div>
                             )

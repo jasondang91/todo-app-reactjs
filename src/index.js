@@ -4,11 +4,24 @@ import './styles/index.css'
 import 'bootstrap/dist/css/bootstrap.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+// Import Redux
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import rootReducer from'./store/reducers/rootReducer';
+
+// Config Redux-React
+const reduxStore = createStore(rootReducer, 
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+
+// Config Redux Dev Tool
+// window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={reduxStore}>
+      <App />
+    </Provider>
   </React.StrictMode>
 );
 
